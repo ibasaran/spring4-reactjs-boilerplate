@@ -1,13 +1,3 @@
-# Maven
-target/
-**/target/
-.mvn/
-!.mvn/wrapper/maven-wrapper.jar
-
-# IDEs
-.idea/
-*.iml
-.vscode/
 
 # Node
 /web/node_modules/
@@ -24,3 +14,29 @@ logs/
 .project
 .classpath
 .settings
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### Spring Boot ###
+spring.log
+.env
+application-local.properties
+application-local.yml
