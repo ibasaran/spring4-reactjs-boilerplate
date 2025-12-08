@@ -1,0 +1,45 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="assistant">
+        <createTable tableName="authors">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+            <column name="created_at" type="timestamp"/>
+            <column name="updated_at" type="timestamp"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="assistant">
+        <createTable tableName="libraries">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+            <column name="created_at" type="timestamp"/>
+            <column name="updated_at" type="timestamp"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="3" author="assistant">
+        <createTable tableName="books">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="varchar(255)"/>
+            <column name="author_id" type="uuid"/>
+            <column name="library_id" type="uuid"/>
+            <column name="created_at" type="timestamp"/>
+            <column name="updated_at" type="timestamp"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="books" baseColumnNames="author_id" constraintName="fk_books_author" referencedTableName="authors" referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="books" baseColumnNames="library_id" constraintName="fk_books_library" referencedTableName="libraries" referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>
