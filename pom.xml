@@ -5,7 +5,7 @@
          http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
-  <artifactId>modular-monolith</artifactId>
+  <artifactId>spring-moduler-app</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -18,7 +18,7 @@
   </modules>
 
   <properties>
-    <java.version>17</java.version>
+    <java.version>21</java.version>
     <spring.boot.version>3.2.0</spring.boot.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <maven.compiler.source>17</maven.compiler.source>
