@@ -1,19 +1,20 @@
+# Modüler Spring React Örneği
 
-# Modular Monolith Example
+Bu proje, çalıştırılabilir minimal bir modüler Spring mimarisi iskeletidir.
 
-This is a runnable minimal modular monolith skeleton.
-
-## Run locally (using docker-compose)
+## Lokal Çalıştırma (docker-compose kullanarak)
 
 ```bash
 docker compose up --build
-```
 
-- Backend API: http://localhost:8080
-- Web UI (Vite dev): http://localhost:3000
+Backend API: http://localhost:8080
 
-## Notes
-- Liquibase changelog is in `persistence/src/main/resources/db/changelog/db.changelog-master.xml` and will run on startup via spring.liquibase in api-web.
-- BaseEntity uses UUID id and automatic createdAt/updatedAt.
-- Generic BaseController and GlobalExceptionHandler included.
-- This is a minimal example for demo; security (JWT) is a placeholder and not production hardened.
+Web UI (Vite dev): http://localhost:3000
+
+Notlar
+
+Liquibase changelog dosyası persistence/src/main/resources/db/changelog/db.changelog-master.xml konumundadır ve api-web içerisindeki spring.liquibase ayarları sayesinde uygulama başlatılırken otomatik olarak çalışır.
+
+BaseEntity, UUID tabanlı id yapısını ve otomatik createdAt / updatedAt alanlarını içerir.
+
+Generic BaseController ve GlobalExceptionHandler projeye dahildir.
