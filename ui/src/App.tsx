@@ -1,3 +1,12 @@
+import { ThemeProvider } from '@/components/theme-provider';
+
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <ThemeProvider
+      defaultTheme='dark'
+      storageKey='vite-ui-theme'
+    >
+      <div> App </div>
+    </ThemeProvider>
+  );
 };
