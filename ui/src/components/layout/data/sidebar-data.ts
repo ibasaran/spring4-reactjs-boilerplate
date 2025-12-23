@@ -26,8 +26,8 @@ import { type SidebarData } from '../types'
 
 export const sidebarData: SidebarData = {
   user: {
-    name: 'satnaing',
-    email: 'satnaingdev@gmail.com',
+    name: 'ismail başaran',
+    email: 'basaran.ismaill@gmail.com',
     avatar: '/avatars/shadcn.jpg',
   },
   teams: [
@@ -49,7 +49,7 @@ export const sidebarData: SidebarData = {
   ],
   navGroups: [
     {
-      title: 'General',
+      title: 'Genel',
       items: [
         {
           title: 'Anasayfa',
@@ -66,8 +66,8 @@ export const sidebarData: SidebarData = {
           icon: Settings,
           items: [
             {
-              title: 'Profil',
-              url: '/settings',
+              title: 'Kullanıcı Yönetimi',
+              url: '/settings/user-management',
               icon: UserCog,
             },
           ],

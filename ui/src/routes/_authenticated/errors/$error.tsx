@@ -28,14 +28,6 @@ function RouteComponent() {
 
   return (
     <>
-      <Header fixed className='border-b'>
-        <Search />
-        <div className='ms-auto flex items-center space-x-4'>
-          <ThemeSwitch />
-          <ConfigDrawer />
-          <ProfileDropdown />
-        </div>
-      </Header>
       <div className='flex-1 [&>div]:h-full'>
         <ErrorComponent />
       </div>
