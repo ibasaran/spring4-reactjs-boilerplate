@@ -1,5 +1,5 @@
-import { ThemeProvider } from '@/components/theme-provider';
-import { AppSidebar } from '@/components/AppSidebar';
+import { ThemeProvider } from '@/components/layout/theme-provider';
+import { AppSidebar } from '@/components/layout/app-sidebar';
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 export const App = () => {
   return (
@@ -9,9 +9,7 @@ export const App = () => {
     >
       <SidebarProvider open={false}>
         <AppSidebar />
-        <SidebarInset>
-
-        </SidebarInset>
+        <SidebarInset></SidebarInset>
       </SidebarProvider>
     </ThemeProvider>
   );
